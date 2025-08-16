@@ -1,0 +1,52 @@
+import java.io.*;
+public class GroceryBillSystem
+{
+    public static void main(String args[]) throws IOException
+    {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        
+        System.out.print("Enter the total number of all items: ");
+        int NumberOfItems = Integer.parseInt(br.readLine());
+        System.out.println();
+        
+        String productName[] = new String[NumberOfItems];
+        int productQuantity[] = new int[NumberOfItems];
+        int productUnitPrice[] = new int[NumberOfItems];
+        int productPerPrice[] = new int[NumberOfItems];
+        int totalPrice = 0;
+        
+        for(int i = 0; i < NumberOfItems; i++)
+        {
+            System.out.println("Enter details for product " + (i + 1) + " .....");
+            System.out.print("Product name: ");
+            productName[i] = br.readLine();
+            System.out.println();
+            
+            System.out.print("Quantity: ");
+            productQuantity[i] = Integer.parseInt(br.readLine());
+            System.out.println();
+            
+            System.out.print("Product Unit Price: Rs");
+            productUnitPrice[i] = Integer.parseInt(br.readLine());
+            System.out.println();
+            
+            productPerPrice[i] = productQuantity[i] * productUnitPrice[i];
+            totalPrice += productPerPrice[i];
+            
+            System.out.println("Total price for product " + (i + 1) + " is Rs." + productPerPrice[i]);
+        }
+        
+        System.out.println("********************************************* BILL SUMMARY ***********************************************************");
+        System.out.println("Product" + "\t\tQuantity" + "\t\tUnit Price" + "\tTotal");
+        for(int i = 0; i < NumberOfItems; i++)
+        {
+            System.out.println("" + productName[i] + "\t\t" + productQuantity[i] + "\t\tRs" + productUnitPrice[i] + "\t\tRs" + productPerPrice[i]);
+        }
+        
+        System.out.println("Grand Total: Rs" + totalPrice);
+        
+        br.close();
+        isr.close();
+    }
+}
