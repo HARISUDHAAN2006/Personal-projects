@@ -1,0 +1,83 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class CalculatorApplication {
+    public static void main(String args[]) {
+        JFrame frame = new JFrame("Calculator Application");
+        frame.setSize(500, 400);
+        frame.setLayout(null);
+
+        JLabel firstNumberLabel = new JLabel("First number:");
+        firstNumberLabel.setBounds(50, 50, 100, 30);
+
+        JTextField firstNumberTextField = new JTextField();
+        firstNumberTextField.setBounds(160, 50, 150, 30);
+
+        JLabel secondNumberLabel = new JLabel("Second number:");
+        secondNumberLabel.setBounds(50, 100, 100, 30);
+
+        JTextField secondNumberTextField = new JTextField();
+        secondNumberTextField.setBounds(160, 100, 150, 30);
+
+        JButton addButton = new JButton("ADD");
+        addButton.setBounds(50, 160, 80, 30);
+
+        JButton subButton = new JButton("SUBTRACT");
+        subButton.setBounds(140, 160, 100, 30);
+
+        JButton mulButton = new JButton("MULTIPLY");
+        mulButton.setBounds(250, 160, 100, 30);
+
+        JButton divButton = new JButton("DIVIDE");
+        divButton.setBounds(50, 200, 80, 30);
+        
+        JLabel resultLabel = new JLabel("Result: ");
+        resultLabel.setBounds(50, 310, 100, 30);
+        
+        addButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                double result = Integer.parseInt(firstNumberTextField.getText()) + Integer.parseInt(secondNumberTextField.getText());
+                resultLabel.setText("Result: " + Double.toString(result));
+            }
+        });
+        
+        subButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                double result = Integer.parseInt(firstNumberTextField.getText()) - Integer.parseInt(secondNumberTextField.getText());
+                resultLabel.setText("Result: " + Double.toString(result));
+            }
+        });
+        
+        mulButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                double result = Integer.parseInt(firstNumberTextField.getText()) * Integer.parseInt(secondNumberTextField.getText());
+                resultLabel.setText("Result: " + Double.toString(result));
+            }
+        });
+        
+        divButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                double result = Integer.parseInt(firstNumberTextField.getText()) / Integer.parseInt(secondNumberTextField.getText());
+                resultLabel.setText("Result: " + Double.toString(result));
+            }
+        });
+
+        frame.add(firstNumberLabel);
+        frame.add(firstNumberTextField);
+        frame.add(secondNumberLabel);
+        frame.add(secondNumberTextField);
+        frame.add(addButton);
+        frame.add(subButton);
+        frame.add(mulButton);
+        frame.add(divButton);
+        frame.add(resultLabel);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
