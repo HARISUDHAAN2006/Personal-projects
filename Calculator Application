@@ -1,0 +1,301 @@
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptEngine;
+import javax.script.ScriptException;
+
+public class CalculatorApplication2
+{
+    private static double result = 0.0;
+    public static void main(String args[])
+    {
+        JFrame mainFrame = new JFrame("Calculator Application");
+        mainFrame.setSize(1200, 700);
+        mainFrame.setLayout(null);
+
+        JLabel inputLabel = new JLabel("0");
+        inputLabel.setBounds(150, 50, 100, 100);
+        mainFrame.add(inputLabel);
+
+        //First row
+        JButton oneButton = new JButton("1");
+        oneButton.setBounds(150, 200, 50, 30);
+        mainFrame.add(oneButton);
+
+        JButton twoButton = new JButton("2");
+        twoButton.setBounds(250, 200, 50, 30);
+        mainFrame.add(twoButton);
+
+        JButton threeButton = new JButton("3");
+        threeButton.setBounds(350, 200, 50, 30);
+        mainFrame.add(threeButton);
+
+        JButton fourButton = new JButton("4");
+        fourButton.setBounds(450, 200, 50, 30);
+        mainFrame.add(fourButton);
+
+        //Second row
+        JButton fiveButton = new JButton("5");
+        fiveButton.setBounds(150, 300, 50, 30);
+        mainFrame.add(fiveButton);
+
+        JButton sixButton = new JButton("6");
+        sixButton.setBounds(250, 300, 50, 30);
+        mainFrame.add(sixButton);
+
+        JButton sevenButton = new JButton("7");
+        sevenButton.setBounds(350, 300, 50, 30);
+        mainFrame.add(sevenButton);
+
+        JButton eightButton = new JButton("8");
+        eightButton.setBounds(450, 300, 50, 30);
+        mainFrame.add(eightButton);
+
+        //Third row
+        JButton nineButton = new JButton("9");
+        nineButton.setBounds(150, 400, 50, 30);
+        mainFrame.add(nineButton);
+
+        JButton zeroButton = new JButton("0");
+        zeroButton.setBounds(250, 400, 50, 30);
+        mainFrame.add(zeroButton);
+
+        JButton additionButton = new JButton("+");
+        additionButton.setBounds(350, 400, 50, 30);
+        mainFrame.add(additionButton);
+
+        JButton substractionButton = new JButton("-");
+        substractionButton.setBounds(450, 400, 50, 30);
+        mainFrame.add(substractionButton);
+
+        //Fourth row
+        JButton multiplicationButton = new JButton("x");
+        multiplicationButton.setBounds(150, 500, 50, 30);
+        mainFrame.add(multiplicationButton);
+        
+        JButton equalToButton = new JButton("=");
+        equalToButton.setBounds(250, 500, 50, 30);
+        mainFrame.add(equalToButton);
+        
+        JButton backButton = new JButton("BACK");
+        backButton.setBounds(350, 500, 80, 30);
+        mainFrame.add(backButton);
+        
+        JLabel outputLabel = new JLabel(".");
+        outputLabel.setBounds(150, 600, 100, 100);
+        mainFrame.add(outputLabel);
+
+        JButton divisionButton = new JButton("/");
+        divisionButton.setBounds(250, 600, 50, 30);
+        mainFrame.add(divisionButton);
+
+        //Action listeners
+        oneButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+                inputLabel.setText("");
+                inputLabel.setText(inputLabel.getText() + oneButton.getText());
+            }
+        });
+
+        twoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                if(inputLabel.getText().equals("0"))
+                {
+                    inputLabel.setText("");
+                    inputLabel.setText(inputLabel.getText() + twoButton.getText());
+                }
+                else
+                {
+                    inputLabel.setText(inputLabel.getText() + twoButton.getText());
+                }
+            }
+        });
+
+        threeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                if(inputLabel.getText().equals("0"))
+                {
+                    inputLabel.setText("");
+                    inputLabel.setText(inputLabel.getText() + threeButton.getText());
+                }
+                else
+                {
+                    inputLabel.setText(inputLabel.getText() + threeButton.getText());
+                }
+            }
+        });
+
+        fourButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                if(inputLabel.getText().equals("0"))
+                {
+                    inputLabel.setText("");
+                    inputLabel.setText(inputLabel.getText() + fourButton.getText());
+                }
+                else
+                {
+                    inputLabel.setText(inputLabel.getText() + fourButton.getText());
+                }
+            }
+        });
+        
+        fiveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                if(inputLabel.getText().equals("0"))
+                {
+                    inputLabel.setText("");
+                    inputLabel.setText(inputLabel.getText() + fiveButton.getText());
+                }
+                else
+                {
+                    inputLabel.setText(inputLabel.getText() + fiveButton.getText());
+                }
+            }
+        });
+        
+        sixButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                if(inputLabel.getText().equals("0"))
+                {
+                    inputLabel.setText("");
+                    inputLabel.setText(inputLabel.getText() + sixButton.getText());
+                }
+                else
+                {
+                    inputLabel.setText(inputLabel.getText() + sixButton.getText());
+                }
+            }
+        });
+        
+        sevenButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                if(inputLabel.getText().equals("0"))
+                {
+                    inputLabel.setText("");
+                    inputLabel.setText(inputLabel.getText() + sevenButton.getText());
+                }
+                else
+                {
+                    inputLabel.setText(inputLabel.getText() + sevenButton.getText());
+                }
+            }
+        });
+        
+        eightButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                if(inputLabel.getText().equals("0"))
+                {
+                    inputLabel.setText("");
+                    inputLabel.setText(inputLabel.getText() + eightButton.getText());
+                }
+                else
+                {
+                    inputLabel.setText(inputLabel.getText() + eightButton.getText());
+                }
+            }
+        });
+        
+        nineButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                if(inputLabel.getText().equals("0"))
+                {
+                    inputLabel.setText("");
+                    inputLabel.setText(inputLabel.getText() + nineButton.getText());
+                }
+                else
+                {
+                    inputLabel.setText(inputLabel.getText() + nineButton.getText());
+                }
+            }
+        });
+        
+        zeroButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                if(inputLabel.getText().equals("0"))
+                {
+                    inputLabel.setText("");
+                    inputLabel.setText(inputLabel.getText() + zeroButton.getText());
+                }
+                else
+                {
+                    inputLabel.setText(inputLabel.getText() + zeroButton.getText());
+                }
+            }
+        });
+        
+        additionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                inputLabel.setText(inputLabel.getText() + additionButton.getText());
+            }
+        });
+        
+        substractionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                inputLabel.setText(inputLabel.getText() + substractionButton.getText());
+            }
+        });
+        
+        multiplicationButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                inputLabel.setText(inputLabel.getText() + "*");
+            }
+        });
+        
+        divisionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                inputLabel.setText(inputLabel.getText() + divisionButton.getText());
+            }
+        });
+        
+        
+        equalToButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                try
+                {
+                    ScriptEngineManager manager = new ScriptEngineManager();
+                    ScriptEngine engine = manager.getEngineByName("JavaScript");
+                    String expression = inputLabel.getText();
+                    Object result1 = engine.eval(expression);
+                    outputLabel.setText("" + result1);
+                }
+                catch(Exception ex)
+                {
+                    System.err.println(ex.getMessage());
+                }
+            }
+        });
+
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setVisible(true);
+    }
+}
