@@ -1,0 +1,68 @@
+import java.util.*;
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.geometry.Pos;
+import javafx.geometry.Insets;
+
+public class ToDoListFX extends Application {
+
+    @Override
+    public void start(Stage stage) {
+        stage.setTitle("To-do list application");
+
+        GridPane taskSection = new GridPane();
+        taskSection.setHgap(10);
+        taskSection.setVgap(10);
+        taskSection.setAlignment(Pos.CENTER);
+
+        Label taskLabel = new Label("Task: ");
+        taskSection.add(taskLabel, 0, 0);
+        TextArea taskArea = new TextArea();
+        taskSection.add(taskArea, 1, 0);
+        taskArea.setPromptText("Enter your task here.....");
+        taskArea.setWrapText(true);
+        taskArea.setPrefHeight(100);
+        taskArea.setPrefWidth(250);
+
+        Button addButton = new Button("Add task");
+        taskSection.add(addButton, 0, 1);
+
+        Button removeButton = new Button("Remove task");
+        taskSection.add(removeButton, 1, 1);
+        
+        ObservableList<String> todolist = FXCollections.observableArrayList();
+        ListView<String> listView = new ListView<>(todolist);
+
+        addButton.setOnAction(e -> {
+            String item = taskArea.getText();
+            if (!item.trim().isEmpty()) {
+                todolist.add(item);
+                taskArea.clear();
+            }
+        });
+
+        removeButton.setOnAction(e -> {
+            String selected = listView.getSelectionModel().getSelectedItem();
+            if (selected != null) {
+                todolist.remove(selected);
+            }
+        });
+
+        VBox rootLayout = new VBox(20);
+        rootLayout.setPadding(new Insets(20));
+        rootLayout.getChildren().addAll(taskSection, listView);
+
+        Scene scene = new Scene(rootLayout, 400, 600);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
