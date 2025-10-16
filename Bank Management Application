@@ -1,0 +1,114 @@
+import java.io.*;
+import java.util.*;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
+import javafx.geometry.Pos;
+import javafx.geometry.Insets;
+import javafx.geometry.*;
+
+public class BankApp extends Application
+{
+    @Override
+    public void start(Stage stage)
+    {
+        //Scene 1: LOGIN PAGE
+        Label welcomeMessageLabel = new Label("Welcome to our Bank Application!");
+        welcomeMessageLabel.setStyle("-fx-font-size: 20pt; -fx-font-weight: bold;");
+        
+        Label bankUsernameLabel = new Label("Username:");
+        bankUsernameLabel.setStyle("-fx-font-size: 14pt;");
+        TextField bankUsernameTextField = new TextField();
+        bankUsernameTextField.setStyle("-fx-padding: 10px 25px;");
+        
+        Label bankAccountNumberLabel = new Label("Bank Account Number:");
+        bankAccountNumberLabel.setStyle("-fx-font-size: 14pt;");
+        TextField bankAccountNumberTextField = new TextField();
+        bankAccountNumberTextField.setStyle("-fx-padding: 10px 25px;");
+        
+        Label passwordLabel = new Label("Password:");
+        passwordLabel.setStyle("-fx-font-size: 14pt;");
+        PasswordField passwordField = new PasswordField();
+        passwordField.setStyle("-fx-padding: 10px 25px;");
+        
+        Button loginButton = new Button("LOGIN");
+        loginButton.setStyle("-fx-padding: 10px 20px;");
+        
+        Label accountExistenceStatusLabel = new Label("Account status");
+        
+        
+        Label newUserLabel = new Label("New user? Create a account here!");
+        newUserLabel.setStyle("-fx-font-size: 14pt;");
+        
+        Label createUsernameLabel = new Label("Create a username: ");
+        createUsernameLabel.setStyle("-fx-font-size: 12pt;");
+        TextField createUsernameTextField = new TextField();
+        createUsernameTextField.setStyle("-fx-padding: 10px 25px;");
+        
+        Label createPasswordLabel = new Label("Create a password: ");
+        createPasswordLabel.setStyle("-fx-font-size: 12pt;");
+        TextField createPasswordTextField = new TextField();
+        createPasswordTextField.setStyle("-fx-padding: 10px 25px;");
+        
+        Button createAccountButton = new Button("Create");
+        createAccountButton.setStyle("-fx-padding: 10px 25px;");
+        
+        HBox topHBox = new HBox();
+        topHBox.setAlignment(Pos.CENTER);
+        topHBox.getChildren().addAll(welcomeMessageLabel);
+        
+        GridPane gridPaneLayout = new GridPane();
+        gridPaneLayout.setHgap(10);
+        gridPaneLayout.setVgap(10);
+        //gridPaneLayout.setAlignment(Pos.CENTER);
+        gridPaneLayout.setPadding(new Insets(50, 0, 0, 250));
+        
+        gridPaneLayout.add(bankUsernameLabel, 0, 0);
+        gridPaneLayout.add(bankUsernameTextField, 1, 0);
+        gridPaneLayout.add(bankAccountNumberLabel, 0, 1);
+        gridPaneLayout.add(bankAccountNumberTextField, 1, 1);
+        gridPaneLayout.add(passwordLabel, 0, 2);
+        gridPaneLayout.add(passwordField, 1, 2);
+        gridPaneLayout.setHalignment(loginButton, HPos.CENTER);
+        gridPaneLayout.add(loginButton, 0, 3, 2, 1);
+        gridPaneLayout.setHalignment(accountExistenceStatusLabel, HPos.CENTER);
+        gridPaneLayout.add(accountExistenceStatusLabel, 0, 4, 2, 1);
+        
+        HBox newUserHBox = new HBox();
+        newUserHBox.setAlignment(Pos.CENTER);
+        newUserHBox.getChildren().addAll(newUserLabel);
+        
+        HBox createButtonHBox = new HBox();
+        createButtonHBox.setAlignment(Pos.CENTER);
+        createButtonHBox.getChildren().addAll(createAccountButton);
+        
+        GridPane bottomGridPaneLayout = new GridPane();
+        bottomGridPaneLayout.setHgap(10);
+        bottomGridPaneLayout.setVgap(10);
+        bottomGridPaneLayout.setAlignment(Pos.CENTER);
+        bottomGridPaneLayout.add(createUsernameLabel, 0, 0);
+        bottomGridPaneLayout.add(createUsernameTextField, 1, 0);
+        bottomGridPaneLayout.add(createPasswordLabel, 0, 1);
+        bottomGridPaneLayout.add(createPasswordTextField, 1, 1);
+        
+        VBox bottomVBox = new VBox();
+        bottomVBox.setSpacing(15);
+        bottomVBox.setPadding(new Insets(50,0,250,0));
+        bottomVBox.getChildren().addAll(newUserHBox, bottomGridPaneLayout, createButtonHBox);
+        
+        BorderPane rootBorderPane = new BorderPane();
+        rootBorderPane.setTop(topHBox);
+        rootBorderPane.setCenter(gridPaneLayout);
+        rootBorderPane.setBottom(bottomVBox);
+        
+        Scene loginPageScene = new Scene(rootBorderPane, 900, 700);
+        stage.setScene(loginPageScene);
+        stage.show();
+    }
+    public static void main(String args[])
+    {
+        launch(args);
+    }
+}
