@@ -11,8 +11,46 @@ import javafx.geometry.*;
 
 public class BankApp extends Application
 {
+    private void saveNewAccountDetails(String newUsername, String newPassword)
+    {
+        try(FileWriter writer = new FileWriter("New_Account_Details.txt", true))
+        {
+            String line = newUsername + "," + newPassword + "\n";
+            
+            writer.write(line);
+        }
+        catch(IOException exception)
+        {
+            System.err.println(exception.getMessage());
+        }
+    }
+    
+    private boolean validateLogin(String inputUsername, String inputPassword) {
+        String filePath = "New_Account_Details.txt";
+        try (Scanner fileScanner = new Scanner(new File(filePath))) {
+            
+            while (fileScanner.hasNextLine()) {
+                String line = fileScanner.nextLine();
+                String[] parts = line.split(",");
+                if (parts.length >= 2) {
+                    String storedUsername = parts[0].trim();
+                    String storedPassword = parts[1].trim();
+
+                    if (inputUsername.equals(storedUsername) && inputPassword.equals(storedPassword)) {
+                        return true;
+                    }
+                }
+            }
+            return false; 
+            
+        } catch (FileNotFoundException e) {
+            System.err.println("Validation Error: Account details file not found. File may need to be created first.");
+            return false;
+        }
+    }
+    
     @Override
-    public void start(Stage stage)
+    public void start(Stage stage) throws IOException,IOException
     {
         //Scene 1: LOGIN PAGE
         Label welcomeMessageLabel = new Label("Welcome to our Bank Application!");
@@ -36,7 +74,10 @@ public class BankApp extends Application
         Button loginButton = new Button("LOGIN");
         loginButton.setStyle("-fx-padding: 10px 20px;");
         
+        
         Label accountExistenceStatusLabel = new Label("Account status");
+        
+        
         
         
         Label newUserLabel = new Label("New user? Create a account here!");
@@ -54,6 +95,16 @@ public class BankApp extends Application
         
         Button createAccountButton = new Button("Create");
         createAccountButton.setStyle("-fx-padding: 10px 25px;");
+        
+        //File storage for new user accounts
+        createAccountButton.setOnAction(event -> {
+            saveNewAccountDetails(createUsernameTextField.getText(), createPasswordTextField.getText());
+            
+            accountExistenceStatusLabel.setText("Account created successfully! You can login now.");
+            accountExistenceStatusLabel.setStyle("-fx-text-fill: blue;");
+        });
+        
+        
         
         HBox topHBox = new HBox();
         topHBox.setAlignment(Pos.CENTER);
@@ -98,16 +149,66 @@ public class BankApp extends Application
         bottomVBox.setPadding(new Insets(50,0,250,0));
         bottomVBox.getChildren().addAll(newUserHBox, bottomGridPaneLayout, createButtonHBox);
         
-        BorderPane rootBorderPane = new BorderPane();
-        rootBorderPane.setTop(topHBox);
-        rootBorderPane.setCenter(gridPaneLayout);
-        rootBorderPane.setBottom(bottomVBox);
+        BorderPane rootBorderPane1 = new BorderPane();
+        rootBorderPane1.setTop(topHBox);
+        rootBorderPane1.setCenter(gridPaneLayout);
+        rootBorderPane1.setBottom(bottomVBox);
         
-        Scene loginPageScene = new Scene(rootBorderPane, 900, 700);
+        //Scene 2: Account Details Display
+        Label accountBalanceLabel = new Label("Account Balance");
+        Label accountBalance = new Label("************");
+        
+        Button showBalanceButton = new Button("Show balance");
+        showBalanceButton.setOnAction(event -> {
+            accountBalance.setText("123456");
+        });
+        
+        Button hideBalanceButton = new Button("Hide balance");
+        hideBalanceButton.setOnAction(event -> {
+            accountBalance.setText("************");
+        });
+        
+        VBox box = new VBox(10);
+        box.getChildren().addAll(accountBalanceLabel, accountBalance, showBalanceButton, hideBalanceButton);
+        
+        Scene AccountInformationDisplayScene = new Scene(box, 900, 700);
+        
+        
+        Scene loginPageScene = new Scene(rootBorderPane1, 900, 700);
         stage.setScene(loginPageScene);
+        
+        loginButton.setOnAction(event -> {
+            String username = bankUsernameTextField.getText();
+            String password = passwordField.getText();
+            
+            accountExistenceStatusLabel.setText("Attempting to log in...");
+            accountExistenceStatusLabel.setStyle("-fx-text-fill: orange;");
+
+            // Basic input validation
+            if (username.isEmpty() || password.isEmpty()) {
+                accountExistenceStatusLabel.setText("Please enter both username and password.");
+                accountExistenceStatusLabel.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
+                return;
+            }
+            
+            // Validate credentials against the stored file data
+            if (validateLogin(username, password)) {
+                 accountExistenceStatusLabel.setText("Login Successful!");
+                 accountExistenceStatusLabel.setStyle("-fx-text-fill: blue; -fx-font-weight: bold;");
+                 
+                 // Clear input fields on success
+                 bankUsernameTextField.clear();
+                 passwordField.clear();
+            } else {
+                 accountExistenceStatusLabel.setText("Login Failed. Invalid username or password.");
+                 accountExistenceStatusLabel.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
+            }
+            
+            stage.setScene(AccountInformationDisplayScene);
+        });
         stage.show();
     }
-    public static void main(String args[])
+    public static void main(String args[]) throws IOException
     {
         launch(args);
     }
