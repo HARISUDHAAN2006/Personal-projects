@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Application</title>
+        <link rel = "stylesheet" href = "FrontPageDesign.css">
+    </head>
+    <body>
+        <h1>Weather today</h1>
+        <label>Enter a city name: </label>
+        <input type = "text" placeholder = "Enter a valid city name....." id = "cityName">
+        <button onclick = "getWeatherResult()">Get Weather Details</button>
+        <div id = "weatherDisplayResult">
+            <h2 id = "location"></h2>
+            <h4 id = "condition"></h4>
+            <img id = "weatherIcon" src = "" alt = "icon">
+            <h3 id = "temperature">100 degree celsius</h3>
+            <p>Humidity <span id = "humidity">10%</span></p>
+        </div>
+        <script src = "FrontPageArchitecture.js"></script>
+    </body>
+</html>
