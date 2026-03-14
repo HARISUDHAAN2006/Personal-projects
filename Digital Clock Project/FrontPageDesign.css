@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 190px;
+}
+.time-display-paragraph{
+    font-size: 270px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.day-display-paragraph{
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
