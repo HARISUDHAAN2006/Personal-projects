@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>URL Shortener</title>
+  <style>
+    body {
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #eef2f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .box {
+      background: white;
+      padding: 32px 28px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    h2 {
+      margin: 0 0 10px 0;
+      color: #1f2937;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 8px 0 20px 0;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 9px 16px;
+      border: none;
+      background: #3b82f6;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    #clearBtn {
+      background: #6b7280;
+    }
+
+    #clearBtn:hover {
+      background: #4b5563;
+    }
+
+    #result {
+      margin-top: 20px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: #111827;
+      font-size: 14px;
+      word-break: break-all;
+      min-height: 24px;
+    }
+
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>URL Shortener</h2>
+    <p>Enter any long web address and get a short, easy-to-share link.</p>
+
+    <input type="text" id="longUrl" placeholder="https://example.com/very/long/url" />
+
+    <div class="button-group">
+      <button onclick="shortenURL()">Shorten URL</button>
+      <button id="clearBtn" onclick="clearAll()">Clear</button>
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function shortenURL() {
+      const url = document.getElementById("longUrl").value.trim();
+
+      if (!url) {
+        alert("Please enter a URL first");
+        return;
+      }
+
+      if (!url.startsWith("http://") && !url.startsWith("https://")) {
+        alert("URL must start with http:// or https://");
+        return;
+      }
+
+      const code = Math.random().toString(36).substring(2, 6).toUpperCase();
+      const shortUrl = "https://short.ly/" + code;
+
+      const resultEl = document.getElementById("result");
+      resultEl.innerHTML =
+        "Short URL:<br><a href='" + url + "' target='_blank'>" + shortUrl + "</a>";
+    }
+
+    function clearAll() {
+      document.getElementById("longUrl").value = "";
+      document.getElementById("result").innerHTML = "";
+    }
+  </script>
+</body>
+</html>
