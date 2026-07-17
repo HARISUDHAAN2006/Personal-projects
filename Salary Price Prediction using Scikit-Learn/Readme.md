@@ -1,4 +1,4 @@
-# 💼 Salary Price Prediction using Machine Learning
+# 💼 Salary Price Prediction using Scikit-Learn
 
 ## 📌 Project Overview
 
@@ -126,4 +126,4 @@ Run the notebook or Python script.
 
 ## 👨‍💻 Author
 
-Your Name
+S HARISUDHAAN
