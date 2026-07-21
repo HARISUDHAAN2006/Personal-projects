@@ -1,81 +1,436 @@
+<!-- ========================================================= -->
+<!--                  PERSONAL PROJECTS PORTFOLIO              -->
+<!-- ========================================================= -->
+
 <div align="center">
 
-# ❖ ENGINEERING & DATA SCIENCE PORTFOLIO
+# 🚀 Personal Projects Portfolio
 
-<p align="center">
-  <a href="https://github.com/your-username">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1000&color=3B82F6&center=true&vCenter=true&width=500&lines=Software+Engineering+%7C+Machine+Learning;Java+Desktop+Systems+%7C+Predictive+Modeling;Full-Stack+Web+Utilities+%7C+API+Integrations" alt="Typing Banner" />
-  </a>
-</p>
+### Building practical software through **Machine Learning**, **Java Desktop Applications**, and **Web Development**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/STATUS-ACTIVE%20MAINTENANCE-2563EB?style=flat-square&labelColor=1E293B" alt="Status" />
-  <img src="https://img.shields.io/badge/LICENSE-MIT-10B981?style=flat-square&labelColor=1E293B" alt="License" />
-  <img src="https://img.shields.io/badge/PROJECTS-12%20COMPLETE-6366F1?style=flat-square&labelColor=1E293B" alt="Projects Count" />
-  <img src="https://img.shields.io/badge/FOCUS-CLEAN%20ARCHITECTURE-8B5CF6?style=flat-square&labelColor=1E293B" alt="Focus" />
-</p>
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&pause=2500&color=3B82F6&center=true&vCenter=true&width=650&lines=Software+Engineering+Projects;Machine+Learning+Enthusiast;Java+Desktop+Application+Developer;Always+Learning+%F0%9F%9A%80" alt="Typing SVG" />
 
----
+<br>
+
+![GitHub Repo stars](https://img.shields.io/github/stars/HARISUDHAAN2006/Personal-projects?style=for-the-badge&logo=github)
+![GitHub forks](https://img.shields.io/github/forks/HARISUDHAAN2006/Personal-projects?style=for-the-badge&logo=github)
+![GitHub last commit](https://img.shields.io/github/last-commit/HARISUDHAAN2006/Personal-projects?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/HARISUDHAAN2006/Personal-projects?style=for-the-badge)
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![JavaFX](https://img.shields.io/badge/JavaFX-007ACC?style=flat-square)
+![Swing](https://img.shields.io/badge/Swing-Java-orange?style=flat-square)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
 </div>
 
-## 🏗️ Repository Categorization Matrix
+---
 
-This repository houses a curated collection of production-ready applications, predictive models, and web utilities. The ecosystem is architected across three core domains, emphasizing algorithmic efficiency, robust object-oriented design, and responsive user interfaces.
+# 📖 About This Repository
 
-<br />
+This repository is a curated collection of personal software engineering projects covering **Machine Learning**, **Java Desktop Development**, and **Web Applications**.
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <th width="33%" align="left">🤖 Machine Learning</th>
-    <th width="33%" align="left">☕ Java Desktop Systems</th>
-    <th width="33%" align="left">🌐 Web Utilities</th>
-  </tr>
-  <tr>
-    <td valign="top">
-      Predictive modeling pipelines leveraging regression, classification, and ensemble statistical methods for real-world datasets.<br/><br/>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-      <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />
-      <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas" />
-      <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
-    </td>
-    <td valign="top">
-      Object-oriented desktop applications built with MVC architectures, secure event handling, and custom GUI components.<br/><br/>
-      <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-      <img src="https://img.shields.io/badge/JavaFX-437291?style=flat-square&logo=java&logoColor=white" alt="JavaFX" />
-      <img src="https://img.shields.io/badge/Swing-007396?style=flat-square&logo=java&logoColor=white" alt="Swing" />
-      <img src="https://img.shields.io/badge/JDBC-005571?style=flat-square&logo=java&logoColor=white" alt="JDBC" />
-    </td>
-    <td valign="top">
-      Lightweight, highly responsive client-side web tools and REST API integrations designed with modern UI/UX principles.<br/><br/>
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-      <img src="https://img.shields.io/badge/REST%20API-009688?style=flat-square&logo=fastapi&logoColor=white" alt="REST API" />
-    </td>
-  </tr>
-</table>
-
-<br />
+Each project focuses on solving practical problems while strengthening core programming concepts, software architecture, UI development, and predictive analytics.
 
 ---
 
-## 📂 Interactive Project Cards
+# 📂 Repository Categories
 
-### 🤖 Machine Learning & Predictive Modeling
+<table>
+
+<tr>
+
+<td width="33%" valign="top">
+
+## 🤖 Machine Learning
+
+Predictive models built with Scikit-Learn.
+
+- Calories Burnt Prediction
+- Car Price Prediction
+- Diabetes Prediction
+- Laptop Price Prediction
+- Salary Price Prediction
+
+**Stack**
+
+Python • Pandas • NumPy • Scikit-Learn • Matplotlib
+
+</td>
+
+<td width="33%" valign="top">
+
+## ☕
+
+Java Desktop Applications
+
+Desktop software using JavaFX & Swing.
+
+- Bank Management
+- To-do List
+- Grocery Bill System
+- Calculator Applications
+
+**Stack**
+
+Java • JavaFX • Swing • OOP
+
+</td>
+
+<td width="33%" valign="top">
+
+## 🌐 Web Utilities
+
+Lightweight web applications.
+
+- Weather App
+- URL Shortener
+- Digital Clock
+
+**Stack**
+
+HTML • CSS • JavaScript • APIs
+
+</td>
+
+</tr>
+
+</table>
+
+---
+
+# 🤖 Machine Learning Projects
 
 <details>
-  <summary><b>▸ Calories Burned Prediction Engine</b></summary>
-  <br />
-  <p>A supervised regression pipeline designed to estimate physiological caloric expenditure during physical exertion based on biometric variables such as heart rate, duration, body temperature, and age. The model utilizes XGBoost and Random Forest architectures to achieve high-precision forecasting with minimal variance.</p>
-  
-  | Feature | Tech Stack | Status |
-  | :--- | :--- | :--- |
-  | Multi-variable regression modeling | Python, Scikit-Learn | `Production Ready` |
-  | Exploratory Data Analysis & EDA pipelines | Pandas, Seaborn, Matplotlib | `Optimized` |
-  | Automated feature scaling & imputation | NumPy, Joblib | `Stable` |
 
-  ```bash
-  # Quick Start
-  cd ml-models/calories-prediction && pip install -r requirements.txt
-  python src/train.py --model xgboost --evaluate
+<summary><b>🔥 Calories Burnt Prediction using Scikit-Learn</b></summary>
+
+Predicts the number of calories burned based on user attributes using regression techniques.
+
+| Item | Details |
+|------|----------|
+| Category | Machine Learning |
+| Language | Python |
+| Libraries | Pandas, NumPy, Scikit-Learn |
+| Status | ✅ Completed |
+
+### Quick Start
+
+```bash
+cd "Calories Burnt Prediction using Scikit-Learn"
+
+pip install -r requirements.txt
+
+python app.py
+```
+
+</details>
+
+---
+
+<details>
+
+<summary><b>🚗 Car Price Prediction using Scikit-Learn</b></summary>
+
+Machine learning model that estimates vehicle prices from historical datasets and feature engineering.
+
+| Item | Details |
+|------|----------|
+| Category | Regression |
+| Language | Python |
+| Libraries | Pandas, Scikit-Learn |
+| Status | ✅ Completed |
+
+### Quick Start
+
+```bash
+cd "Car Price Prediction using Scikit-Learn"
+
+python app.py
+```
+
+</details>
+
+---
+
+<details>
+
+<summary><b>🩺 Diabetes Prediction using Scikit-Learn</b></summary>
+
+Predicts the probability of diabetes using supervised learning classification algorithms.
+
+| Item | Details |
+|------|----------|
+| Category | Classification |
+| Language | Python |
+| Framework | Scikit-Learn |
+| Status | ✅ Completed |
+
+### Quick Start
+
+```bash
+cd "Diabetes Prediction Using Scikit-Learn"
+
+python app.py
+```
+
+</details>
+
+---
+
+<details>
+
+<summary><b>💻 Laptop Price Prediction using Scikit-Learn</b></summary>
+
+Uses machine learning techniques to estimate laptop prices based on hardware specifications.
+
+| Item | Details |
+|------|----------|
+| Category | Regression |
+| Libraries | Scikit-Learn |
+| Language | Python |
+| Status | ✅ Completed |
+
+</details>
+
+---
+
+<details>
+
+<summary><b>💰 Salary Price Prediction using Scikit-Learn</b></summary>
+
+Predicts employee salaries from experience and other relevant attributes.
+
+| Item | Details |
+|------|----------|
+| Category | Regression |
+| Libraries | Scikit-Learn |
+| Language | Python |
+| Status | ✅ Completed |
+
+</details>
+
+---
+
+# ☕ Java Desktop Applications
+
+<details>
+
+<summary><b>🏦 Bank Management Application (JavaFX)</b></summary>
+
+A desktop banking system demonstrating JavaFX UI development and object-oriented design principles.
+
+| Item | Details |
+|------|----------|
+| Language | Java |
+| Framework | JavaFX |
+| Database | File / Local Storage |
+| Status | ✅ Completed |
+
+### Features
+
+- Customer Management
+- Transactions
+- Account Operations
+- Modern JavaFX Interface
+
+</details>
+
+---
+
+<details>
+
+<summary><b>✅ To-do List Application (JavaFX)</b></summary>
+
+Task management application with a clean desktop interface for organizing daily activities.
+
+| Item | Details |
+|------|----------|
+| Language | Java |
+| Framework | JavaFX |
+| Status | ✅ Completed |
+
+</details>
+
+---
+
+<details>
+
+<summary><b>🧮 Calculator Application (Java Swing)</b></summary>
+
+Classic calculator built using Java Swing demonstrating GUI programming fundamentals.
+
+| Item | Details |
+|------|----------|
+| Language | Java |
+| Framework | Swing |
+| Status | ✅ Completed |
+
+</details>
+
+---
+
+<details>
+
+<summary><b>🛒 Grocery Bill System</b></summary>
+
+Billing software capable of generating grocery invoices and calculating totals.
+
+| Item | Details |
+|------|----------|
+| Language | Java |
+| Framework | Swing |
+| Status | ✅ Completed |
+
+</details>
+
+---
+
+<details>
+
+<summary><b>➕ Two Number Calculator</b></summary>
+
+Simple calculator application demonstrating Java programming basics.
+
+| Item | Details |
+|------|----------|
+| Language | Java |
+| Status | ✅ Completed |
+
+</details>
+
+---
+
+# 🌐 Web Applications
+
+<details>
+
+<summary><b>🌦 Weather App Project</b></summary>
+
+Weather application integrating external APIs to display real-time weather information.
+
+| Item | Details |
+|------|----------|
+| Languages | HTML • CSS • JavaScript |
+| API | Weather API |
+| Status | ✅ Completed |
+
+</details>
+
+---
+
+<details>
+
+<summary><b>🔗 URL Shortener</b></summary>
+
+A lightweight URL shortening application providing compact and shareable links.
+
+| Item | Details |
+|------|----------|
+| Languages | HTML • CSS • JavaScript |
+| Status | ✅ Completed |
+
+</details>
+
+---
+
+<details>
+
+<summary><b>🕒 Digital Clock Project</b></summary>
+
+Minimal digital clock showcasing JavaScript DOM manipulation and time functions.
+
+| Item | Details |
+|------|----------|
+| Languages | HTML • CSS • JavaScript |
+| Status | ✅ Completed |
+
+</details>
+
+---
+
+# 📊 GitHub Analytics
+
+<div align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=HARISUDHAAN2006&show_icons=true&theme=github_dark&hide_border=true"/>
+
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=HARISUDHAAN2006&layout=compact&theme=github_dark&hide_border=true"/>
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=HARISUDHAAN2006&theme=github-dark-blue&hide_border=true"/>
+
+</div>
+
+---
+
+# 🛠 Repository Structure
+
+```
+Personal-projects
+│
+├── 🤖 Machine Learning
+│   ├── Calories Burnt Prediction
+│   ├── Car Price Prediction
+│   ├── Diabetes Prediction
+│   ├── Laptop Price Prediction
+│   └── Salary Price Prediction
+│
+├── ☕ Java Applications
+│   ├── Bank Management
+│   ├── Calculator
+│   ├── Grocery Bill System
+│   ├── To-do List
+│   └── Two Number Calculator
+│
+└── 🌐 Web Applications
+    ├── Weather App
+    ├── URL Shortener
+    └── Digital Clock
+```
+
+---
+
+# 🎯 Future Improvements
+
+- Add Docker support
+- Improve project documentation
+- CI/CD with GitHub Actions
+- Unit testing
+- REST API integrations
+- More Machine Learning projects
+- Spring Boot applications
+
+---
+
+<div align="center">
+
+## 🤝 Connect With Me
+
+<a href="https://github.com/HARISUDHAAN2006">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/>
+</a>
+
+<a href="https://www.linkedin.com/">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin"/>
+</a>
+
+<a href="mailto:your-email@example.com">
+<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
+---
+
+⭐ If you found this repository useful, consider giving it a star!
+
+**Thanks for visiting! Happy Coding 🚀**
+
+</div>
